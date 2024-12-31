@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>imgbase64 | Koneversi gambar menjadi base64</title>
+        <link rel="stylesheet" href="src/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="title"><span>img</span>base64</h2>
+            <p class="explan">Konversi gambar menjadi base64</p>
+            <div class="row">
+                <main class="main-left">
+                    <div class="output-box">
+                        <div class="wrapper">
+                            <h4>Hasil konversi :</h4>
+                            <button type="button" name="copy" class="btn" onclick="copyToClipboard()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg> <span id="copyOverwrite">Salin</span></button>
+                        </div>
+                        <textarea rows="10" id="consoleData" readonly></textarea>
+                    </div>
+                    <div class="image-preview">
+                        <img id="imgPreview" width="175">
+                    </div>
+                </main>
+                <main class="main-right">
+                    <label for="uploadImage" class="drop-label" id="uploadFile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                        <h4>Seret dan letakan file disini <span>atau</span></h4>
+                        <input type="file" accept="image/*" id="uploadImage" onchange="loadFile(event)" required>
+                    </label>
+                </main>
+            </div>
+        </div>
+        <script src="src/script.js"></script>
+    </body>
+</html>
